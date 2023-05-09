@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 const App = () => {
   let [color, setColor] = useState();
@@ -7,11 +7,9 @@ const App = () => {
     color: '000000',
     text: 'Thumbnail Maker',
     href: '',
-  }
+  };
 
-  return (
-    <></>
-  );
+  return <></>;
 };
 
 export default App;
