@@ -7,7 +7,7 @@ export const Header = () => {
 	return (
 		<>
 			<HeaderContainer>
-				<Title onClick={onClick}>Thumbnail Maker</Title>
+				<Title onClick={onClick}>Thumbnail Maker🎨</Title>
 			</HeaderContainer>
 		</>
 	);
