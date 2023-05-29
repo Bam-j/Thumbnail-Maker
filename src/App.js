@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const App = () => {
-  let [color, setColor] = useState();
+  let [thumbnail, setThumbnail] = useState();
 
-  color = {
+  thumbnail = {
     color: '000000',
     text: 'Thumbnail Maker',
     href: '',
