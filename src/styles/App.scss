@@ -7,3 +7,14 @@ html, body {
 .App {
   text-align: center;
 }
+
+.maker-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 3rem;
+
+  .maker-container {
+    margin: auto;
+  }
+}

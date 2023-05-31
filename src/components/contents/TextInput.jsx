@@ -14,6 +14,8 @@ const InputField = styled.input`
 	border-style: none none solid none;
 	border-bottom-color: #c3c3c3;
 	color: #ffffff;
+	padding-top: 1.25rem;
+	margin: auto;
 	
 	&:focus {
 		outline: none;

@@ -8,9 +8,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className={'maker-container'}>
-        <ThumbnailPalette/>
-        <TextInput/>
+      <div className={'maker-wrapper'}>
+        <div className={'maker-container'}>
+          <ThumbnailPalette/>
+          <TextInput/>
+        </div>
       </div>
     </>
   );
