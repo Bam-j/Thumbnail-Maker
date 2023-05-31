@@ -1,8 +1,10 @@
+import styled from "styled-components";
+
 export const ThumbnailPalette = () => {
 	return (
 		<>
 			<div className={'thumbnail-palette-container'}>
-				<div
+				<Preview
 					id={'thumbnail'}
 					className={'thumbnail'}
 					spellCheck={false}
@@ -17,8 +19,12 @@ export const ThumbnailPalette = () => {
 						color: '#000000'
 					}}>
 					테스트 문구
-				</div>
+				</Preview>
 			</div>
 		</>
 	);
 };
+
+const Preview = styled.div`
+	margin: auto;
+`;

@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { ThumbnailPalette } from "./components/contents/ThumbnailPalette";
 import { TextInput } from "./components/contents/TextInput";
 import './styles/App.scss';
+import { SizeForm } from "./components/contents/SizeForm";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <div className={'maker-container'}>
           <ThumbnailPalette/>
           <TextInput/>
+          <SizeForm/>
         </div>
       </div>
     </>
