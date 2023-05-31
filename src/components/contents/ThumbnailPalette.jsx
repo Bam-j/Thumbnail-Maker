@@ -1,5 +1,3 @@
-import { FiDownload } from "react-icons/fi";
-
 export const ThumbnailPalette = () => {
 	return (
 		<>
@@ -20,7 +18,6 @@ export const ThumbnailPalette = () => {
 					}}>
 					테스트 문구
 				</div>
-				<FiDownload />
 			</div>
 		</>
 	);
