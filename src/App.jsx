@@ -5,6 +5,7 @@ import { TextInput } from "./components/Tools/TextInput";
 import './styles/App.scss';
 import { SizeForm } from "./components/Tools/SizeForm";
 import { ColorPickerButtons } from "./components/Buttons/ColorPickerButtons/ColorPickerButtons";
+import { DownloadButton } from "./components/Buttons/DownloadButton";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <TextInput/>
           <SizeForm/>
           <ColorPickerButtons/>
+          <DownloadButton/>
         </div>
       </div>
     </>

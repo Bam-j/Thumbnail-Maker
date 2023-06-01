@@ -16,4 +16,11 @@ const Button = styled.button`
 	width: 30px;
 	height: 30px;
 	outline: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #a3a3a3;
+	}
 `;
