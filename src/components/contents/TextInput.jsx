@@ -2,17 +2,32 @@ import styled from "styled-components";
 
 export const TextInput = () => {
 	const fontSizeList = [20, 30, 40, 50, 60, 70, 80];
+	const fontList = [
+		'Helvetica',
+		'Nanum Gothic',
+		'Nanum Gothic Coding',
+		'Arial',
+		'Courier',
+		'Noto Sans KR'
+	];
 
 	return (
 		<InputWrapper>
-			<Input/>
+			<Input placeholder={'문구를 여기에 입력해주세요.'}/>
 			<SelectFontSize>
 				{
-					fontSizeList.map(size =>(
+					fontSizeList.map(size => (
 						<option key={size} value={size}>{size}</option>
 					))
 				}
 			</SelectFontSize>
+			<SelectFont>
+				{
+					fontList.map(font => (
+						<option key={font} value={font}>{font}</option>
+					))
+				}
+			</SelectFont>
 		</InputWrapper>
 	);
 };
@@ -35,10 +50,25 @@ const Input = styled.input`
 	&:focus {
 		outline: none;
 	}
+
+	&:first-child {
+		margin-right: 5px;
+	}
+	
+	&::placeholder {
+		font-size: smaller;
+	}
 `;
 
 const SelectFontSize = styled.select`
 	width: 50px;
 	height: 20px;
-	margin: auto;
+	margin: auto auto auto 5px;
+`;
+
+const SelectFont = styled.select`
+	width: 100px;
+	height: 20px;
+	margin: auto auto auto 5px;
+	font-size: 0.5rem;
 `;
