@@ -1,9 +1,10 @@
 import React from "react";
 import { Header } from "./components/Header";
-import { ThumbnailPalette } from "./components/contents/ThumbnailPalette";
+import { ThumbnailPalette } from "./components/PreviewPalette/ThumbnailPalette";
 import { TextInput } from "./components/Tools/TextInput";
 import './styles/App.scss';
 import { SizeForm } from "./components/Tools/SizeForm";
+import { ColorPickerButtons } from "./components/Buttons/ColorPickerButtons/ColorPickerButtons";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <ThumbnailPalette/>
           <TextInput/>
           <SizeForm/>
+          <ColorPickerButtons/>
         </div>
       </div>
     </>
