@@ -17,7 +17,7 @@ const SizeFormWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding-top: 1.125rem;
+  padding-top: 1rem;
   color: #ffffff;
 	
   & .size-input:first-child {

@@ -1,9 +1,9 @@
 import React from "react";
 import { Header } from "./components/Header";
 import { ThumbnailPalette } from "./components/contents/ThumbnailPalette";
-import { TextInput } from "./components/contents/TextInput";
+import { TextInput } from "./components/Tools/TextInput";
 import './styles/App.scss';
-import { SizeForm } from "./components/contents/SizeForm";
+import { SizeForm } from "./components/Tools/SizeForm";
 
 const App = () => {
   return (
