@@ -15,10 +15,10 @@ export const SizeForm = () => {
 
 const SizeFormWrapper = styled.div`
   display: flex;
+  justify-content: center;
   margin: auto;
   padding-top: 1.125rem;
   color: #ffffff;
-	justify-content: center;
 	
   & .size-input:first-child {
     margin-right: 10px;
