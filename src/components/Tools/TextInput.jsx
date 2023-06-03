@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+/*
+기능: 사용자가 입력한 텍스트가 Preview에 보이도록 전달.
+ */
 export const TextInput = () => {
   const fontSizeList = [20, 30, 40, 50, 60, 70, 80];
   const fontList = [

@@ -1,6 +1,9 @@
 import { BiColorFill } from "react-icons/bi";
 import styled from "styled-components";
 
+/*
+기능: 이 버튼을 누르면 Preview의 배경색이 변경. 컬러 선택기가 오픈.
+ */
 export const BgColorPickerButton = () => {
 	return (
 		<>
