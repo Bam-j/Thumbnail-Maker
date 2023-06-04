@@ -1,16 +1,30 @@
 import { BiColorFill } from "react-icons/bi";
 import styled from "styled-components";
+import { useState } from "react";
+import { ColorPicker } from "../../Tools/ColorPicker";
 
 /*
 기능: 이 버튼을 누르면 Preview의 배경색이 변경. 컬러 선택기가 오픈.
  */
 export const BgColorPickerButton = () => {
+	const [isClick, setIsClick] = useState(false);
+
+	const onClick = () => setIsClick(!isClick);
+
 	return (
-		<>
-			<Button>
+		<div className={'ColorPickerWrapper'}>
+			<Button onClick={onClick}>
 				<BiColorFill/>
 			</Button>
-		</>
+
+			{
+				isClick && (
+					<div>
+						<ColorPicker/>
+					</div>
+				)
+			}
+		</div>
 	);
 };
 
