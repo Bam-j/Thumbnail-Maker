@@ -12,7 +12,7 @@ export const FontColorPickerButton = () => {
   const onClick = () => setIsClick(!isClick);
 
   return (
-    <div className={'ColorPickerWrapper'}>s
+    <div className={'ColorPickerWrapper'}>
       <Button>
         <BiFontColor />
       </Button>

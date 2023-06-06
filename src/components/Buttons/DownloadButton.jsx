@@ -27,8 +27,10 @@ const Download = styled.button`
 	outline: none;
 	border: none;
 	cursor: pointer;
+	color: #eaeaea;
 	
 	&:hover {
 		background-color: #6a9aff;
+		color: #3a3a3a; 
 	}
 `;
