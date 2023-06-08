@@ -13,9 +13,10 @@ export const FontColorPickerButton = () => {
 
   return (
     <div className={'ColorPickerWrapper'}>
-      <Button>
+      <Button onClick={onClick}>
         <BiFontColor />
       </Button>
+
       {isClick && <ColorPicker />}
     </div>
   );
