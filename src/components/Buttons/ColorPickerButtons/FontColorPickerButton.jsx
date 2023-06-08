@@ -1,7 +1,7 @@
 import { BiFontColor } from 'react-icons/bi';
 import styled from 'styled-components';
 import { useState } from 'react';
-import { ColorPicker } from '../../Tools/ColorPicker';
+import { ColorPick } from "../../Tools/ColorPick";
 
 /*
 기능: 폰트를 선택하면 Preview의 글자 색 변경. 컬러 선택기가 오픈.
@@ -9,7 +9,10 @@ import { ColorPicker } from '../../Tools/ColorPicker';
 export const FontColorPickerButton = () => {
   const [isClick, setIsClick] = useState(false);
 
-  const onClick = () => setIsClick(!isClick);
+  const onClick = () => {
+    setIsClick(!isClick);
+  };
+
 
   return (
     <div className={'ColorPickerWrapper'}>
@@ -17,7 +20,7 @@ export const FontColorPickerButton = () => {
         <BiFontColor />
       </Button>
 
-      {isClick && <ColorPicker />}
+      {isClick && <ColorPick />}
     </div>
   );
 };
