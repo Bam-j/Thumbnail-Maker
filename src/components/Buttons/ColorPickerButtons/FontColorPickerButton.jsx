@@ -1,6 +1,6 @@
 import { BiFontColor } from 'react-icons/bi';
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 import { ColorPick } from "../../Tools/ColorPick";
 
 /*
@@ -8,6 +8,22 @@ import { ColorPick } from "../../Tools/ColorPick";
  */
 export const FontColorPickerButton = () => {
   const [isClick, setIsClick] = useState(false);
+  const colorPickRef = useRef(null);
+
+
+  useEffect(() => {
+    const handleOutside = e => {
+      if (colorPickRef && !colorPickRef.current.contains(e.target)) {
+        setIsClick(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+    };
+  }, [colorPickRef]);
 
   const onClick = () => {
     setIsClick(!isClick);
@@ -15,7 +31,10 @@ export const FontColorPickerButton = () => {
 
 
   return (
-    <div className={'ColorPickerWrapper'}>
+    <div
+      className={'ColorPickerWrapper'}
+      onClick={onClick}
+      ref={colorPickRef}>
       <Button onClick={onClick}>
         <BiFontColor />
       </Button>
