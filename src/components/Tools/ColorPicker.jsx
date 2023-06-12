@@ -14,4 +14,7 @@ const ColorPickBox = styled.div`
   background-color: #ffffff;
   transition: visibility 0s, opacity 0.5s linear;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 2rem;
+  z-index: 2;
 `;

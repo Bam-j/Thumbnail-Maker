@@ -31,8 +31,7 @@ export const FontColorPickerButton = () => {
 
 
   return (
-    <div
-      className={'ColorPickerWrapper'}
+    <ColorPickerWrapper
       onClick={onClick}
       ref={colorPickRef}>
       <Button onClick={onClick}>
@@ -40,9 +39,13 @@ export const FontColorPickerButton = () => {
       </Button>
 
       {isClick && <ColorPicker />}
-    </div>
+    </ColorPickerWrapper>
   );
 };
+
+const ColorPickerWrapper = styled.div`
+  position: relative;
+`;
 
 const Button = styled.button`
   background-color: #e3e3e3;
