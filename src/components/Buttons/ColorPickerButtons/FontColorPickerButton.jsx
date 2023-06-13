@@ -38,7 +38,7 @@ export const FontColorPickerButton = () => {
         <BiFontColor />
       </Button>
 
-      {isClick && <ColorPicker />}
+      {isClick && <ColorPicker ref={colorPickRef}/>}
     </ColorPickerWrapper>
   );
 };
@@ -52,8 +52,9 @@ const Button = styled.button`
   width: 30px;
   height: 30px;
   outline: none;
-  border: none;
+  border: black solid 2px;
   border-radius: 5px;
+  margin-right: 1rem;
   cursor: pointer;
 
   &:hover {

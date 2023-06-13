@@ -31,8 +31,7 @@ export const BgColorPickerButton = () => {
   return (
     <ColorPickerWrapper
       onClick={onClick}
-      ref={colorPickRef}
-    >
+      ref={colorPickRef}>
       <Button>
         <BiColorFill />
       </Button>
@@ -51,7 +50,7 @@ const Button = styled.button`
   width: 30px;
   height: 30px;
   outline: none;
-  border: none;
+  border: black solid 2px;
   border-radius: 5px;
   cursor: pointer;
 
