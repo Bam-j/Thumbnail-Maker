@@ -1,18 +1,19 @@
 import styled from 'styled-components';
 import { HexColorPicker } from 'react-colorful';
 import React, { useState } from "react";
+import './../../styles/conponents/Tools/ColorPicker.scss';
 
 export const ColorPicker = React.forwardRef(({}, colorPickRef) => {
   const [color, setColor] = useState('#ffffff');
 
   return (
-      <ColorPickBox ref={colorPickRef}>
+      <ColorPickerBox className={'color-picker-box'} ref={colorPickRef}>
         <HexColorPicker color={color} onChange={setColor}/>
-      </ColorPickBox>
+      </ColorPickerBox>
   );
 });
 
-const ColorPickBox = styled.div`
+const ColorPickerBox = styled.div`
   border-radius: 14px;
   background-color: #ffffff;
   transition: visibility 0s, opacity 0.5s linear;
