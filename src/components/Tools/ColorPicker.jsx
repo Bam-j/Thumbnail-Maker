@@ -3,15 +3,15 @@ import { HexColorPicker } from 'react-colorful';
 import React, { useState } from "react";
 import './../../styles/conponents/Tools/ColorPicker.scss';
 
-export const ColorPicker = React.forwardRef(({}, colorPickRef) => {
+export const ColorPicker = () => {
   const [color, setColor] = useState('#ffffff');
 
   return (
-      <ColorPickerBox className={'color-picker-box'} ref={colorPickRef}>
-        <HexColorPicker color={color} onChange={setColor}/>
+      <ColorPickerBox className={'color-picker-box'}>
+        <HexColorPicker color={color} onChange={setColor} prefixed/>
       </ColorPickerBox>
   );
-});
+};
 
 const ColorPickerBox = styled.div`
   border-radius: 14px;

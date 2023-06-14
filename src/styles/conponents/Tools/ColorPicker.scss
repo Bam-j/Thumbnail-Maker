@@ -1,9 +1,22 @@
-.color-picker-box .react-colorful__saturation-pointer {
-  width: 15px;
-  height: 15px;
-}
+.color-picker-box {
+  .react-colorful__saturation-pointer {
+    width: 15px;
+    height: 15px;
+  }
 
-.color-picker-box .react-colorful__hue-pointer {
-  width: 16px;
-  border-radius: 3px;
+  .react-colorful__hue-pointer {
+    width: 16px;
+    border-radius: 3px;
+  }
+
+  .react-colorful__hue-pointer {
+    width: 16px;
+    border-radius: 3px;
+  }
+
+  .react-colorful {
+    padding: 3px;
+    border-radius: 12px;
+    background: #33333a;
+  }
 }

@@ -29,14 +29,12 @@ export const BgColorPickerButton = () => {
   };
 
   return (
-    <ColorPickerWrapper
-      onClick={onClick}
-      ref={colorPickRef}>
-      <Button>
+    <ColorPickerWrapper ref={colorPickRef}>
+      <Button onClick={onClick}>
         <BiColorFill />
       </Button>
 
-      {isClick && <ColorPicker ref={colorPickRef}/>}
+      {isClick && <ColorPicker />}
     </ColorPickerWrapper>
   );
 };

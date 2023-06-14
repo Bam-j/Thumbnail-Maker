@@ -31,9 +31,7 @@ export const FontColorPickerButton = () => {
 
 
   return (
-    <ColorPickerWrapper
-      onClick={onClick}
-      ref={colorPickRef}>
+    <ColorPickerWrapper ref={colorPickRef}>
       <Button onClick={onClick}>
         <BiFontColor />
       </Button>
