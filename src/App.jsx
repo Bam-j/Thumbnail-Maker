@@ -6,10 +6,11 @@ import './styles/App.scss';
 import { SizeForm } from "./components/Tools/SizeForm";
 import { ColorPickerButtons } from "./components/Buttons/ColorPickerButtons/ColorPickerButtons";
 import { DownloadButton } from "./components/Buttons/DownloadButton";
+import { ThumbnailContentsProvider } from "./contexts/thumbnailContents";
 
 const App = () => {
   return (
-    <>
+    <ThumbnailContentsProvider>
       <Header />
       <div className={'maker-wrapper'}>
         <div className={'maker-container'}>
@@ -20,7 +21,7 @@ const App = () => {
           <DownloadButton/>
         </div>
       </div>
-    </>
+    </ThumbnailContentsProvider>
   );
 };
 
