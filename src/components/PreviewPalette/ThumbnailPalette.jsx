@@ -14,7 +14,7 @@ export const ThumbnailPalette = ({
   update,
 }) => {
   const { text, fontSize, fontFamily } = useContext(
-    ThumbnailContentsContext,
+    ThumbnailContentsContext
   ).state;
   const previewRef = useRef(null);
 
@@ -34,11 +34,14 @@ export const ThumbnailPalette = ({
       drawText(canvas, text, fontSize);
       update(canvas.toDataURL());
     };
-    render();
+    render().then(r => r);
   }, [
     width,
     height,
+    text,
     textColor,
+    fontSize,
+    fontFamily,
     backgroundColor,
     update,
   ]);

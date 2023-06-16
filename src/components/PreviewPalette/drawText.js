@@ -3,14 +3,15 @@ export const drawText = (canvas, text, fontSize) => {
   const defaultWidth = canvas.width / 2;
   const defaultHeight = canvas.height / 2;
   const fontHeight = fontSize * 1.4;
-  const SEPARATOR = '\\n';
-  const lines = text.split(SEPARATOR);
+  const lines = text.split('\\n');
 
   if (lines.length % 2) {
     lines.map((line, index) => {
       const middle = parseInt((lines.length / 2).toString(), 10);
       const h = defaultHeight + (index - middle) * fontHeight;
+
       ctx.fillText(line, defaultWidth, h);
+
       return null;
     });
   } else {
