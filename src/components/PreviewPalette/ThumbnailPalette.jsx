@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useContext, useEffect, useRef, useState } from "react";
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 import { setCanvasFont } from "./setCanvasFont";
@@ -25,7 +24,7 @@ export const ThumbnailPalette = ({
       const ctx = canvas.getContext('2d');
 
       ctx.fillStyle = backgroundColor;
-      ctx.fillRect(0, 0, canvas.width, canvas,height);
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       setCanvasFont(canvas, {
         color: textColor,
@@ -81,6 +80,8 @@ export const ThumbnailPalette = ({
  */
 };
 
+/*
 const Preview = styled.div`
   margin: auto;
 `;
+ */

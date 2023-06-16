@@ -1,16 +1,36 @@
 import styled from 'styled-components';
+import { useContext } from 'react';
+import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 
 /*
 기능: 사용자가 width와 height 크기를 입력하면 그 값을 Preview로 전달.
  */
 export const SizeForm = () => {
+  const { state, actions } = useContext(ThumbnailContentsContext);
+
+  const handleChange = (e) => {
+    e.target.name === 'width'
+      ? actions.setWidth(e.target.value)
+      : actions.setHeight(e.target.value);
+  };
+
   return (
     <SizeFormWrapper>
       <label className={'size-input'}>
-        <WidthInput placeholder={'width'} />
+        <WidthInput
+          placeholder={'width'}
+          name={'width'}
+          value={state.width}
+          onChange={handleChange}
+        />
       </label>
       <label className={'size-input'}>
-        <HeightInput placeholder={'height'} />
+        <HeightInput
+          placeholder={'height'}
+          name={'height'}
+          value={state.height}
+          onChange={handleChange}
+        />
       </label>
     </SizeFormWrapper>
   );
@@ -22,7 +42,7 @@ const SizeFormWrapper = styled.div`
   margin: auto;
   padding-top: 1rem;
   color: #ffffff;
-	
+
   & .size-input:first-child {
     margin-right: 10px;
   }

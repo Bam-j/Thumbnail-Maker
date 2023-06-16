@@ -18,7 +18,7 @@ const ThumbnailContentsContext = createContext({
 const ThumbnailContentsProvider = ({ children }) => {
   const [width, setWidth] = useState(700);
   const [height, setHeight] = useState(350);
-  const [text, setText] = useState('Text');
+  const [text, setText] = useState('Sample');
   const [typeOfColorPicker, setTypeOfColorPicker] = useState('');
   const [textColor, setTextColor] = useState('#000000');
   const [fontSize, setFontSize] = useState(20);

@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useContext } from "react";
+import { ThumbnailContentsContext } from "../../contexts/thumbnailContents";
 
 /*
 기능: 사용자가 입력한 텍스트가 Preview에 보이도록 전달.
@@ -13,10 +15,19 @@ export const TextInput = () => {
     'Courier',
     'Noto Sans KR',
   ];
+  const {actions} = useContext(ThumbnailContentsContext);
+
+  const handleChange = e => {
+    actions.setText(e.target.value);
+  };
 
   return (
     <>
-      <Input placeholder={'문구를 여기에 입력해주세요.'} />
+      <Input
+        placeholder={'문구를 여기에 입력해주세요.'}
+        onChange={e => handleChange(e)}
+        type={'text'}
+      />
       <FontSettingWrapper>
         <SelectFontSize className={'font-setting'}>
           {fontSizeList.map((size) => (
