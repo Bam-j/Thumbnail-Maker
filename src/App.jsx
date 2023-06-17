@@ -16,12 +16,7 @@ const App = () => {
       <Header />
       <div className={'maker-wrapper'}>
         <div className={'maker-container'}>
-          <ThumbnailPalette
-            width={state.width}
-            height={state.height}
-            textColor={state.textColor}
-            backgroundColor={state.backgroundColor}
-          />
+          <ThumbnailPalette/>
           <TextInput/>
           <SizeForm/>
           <ColorPickerButtons/>

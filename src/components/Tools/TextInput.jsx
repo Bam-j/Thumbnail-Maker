@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { useContext } from "react";
-import { ThumbnailContentsContext } from "../../contexts/thumbnailContents";
+import { useContext } from 'react';
+import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 
 /*
 기능: 사용자가 입력한 텍스트가 Preview에 보이도록 전달.
@@ -15,9 +15,9 @@ export const TextInput = () => {
     'Courier',
     'Noto Sans KR',
   ];
-  const {actions} = useContext(ThumbnailContentsContext);
+  const { actions } = useContext(ThumbnailContentsContext);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     actions.setText(e.target.value);
   };
 
@@ -25,7 +25,7 @@ export const TextInput = () => {
     <>
       <Input
         placeholder={'문구를 여기에 입력해주세요.'}
-        onChange={e => handleChange(e)}
+        onChange={(e) => handleChange(e)}
         type={'text'}
       />
       <FontSettingWrapper>
@@ -68,7 +68,7 @@ const Input = styled.input`
   &::placeholder {
     font-size: smaller;
   }
-  
+
   & .font-setting:first-child {
     margin-right: 100px;
   }
@@ -78,7 +78,7 @@ const FontSettingWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-	padding-top: 1.125rem;
+  padding-top: 1.125rem;
 `;
 
 const SelectFontSize = styled.select`

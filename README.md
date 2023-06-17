@@ -9,7 +9,9 @@
 준비 중 입니다.<hr>
 
 ## 3. 사용 기술
-`HTML5`, `CSS3`, `JavaScript`
+`HTML5`, `CSS3`, `JavaScript`, `React.js`
+
+기타 라이브러리
 ```js
-React.js = ['styled-components', 'react-color'];
+SCSS, html2canvas, React Colorful, React Icons, Styled Component
 ```

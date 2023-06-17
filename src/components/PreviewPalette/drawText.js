@@ -1,3 +1,4 @@
+//canvas 사용시 사용할 모듈. 추후에 canvas 미사용시 삭제
 export const drawText = (canvas, text, fontSize) => {
   const ctx = canvas.getContext('2d');
   const defaultWidth = canvas.width / 2;
