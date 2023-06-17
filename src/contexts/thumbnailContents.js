@@ -20,10 +20,10 @@ const ThumbnailContentsProvider = ({ children }) => {
   const [height, setHeight] = useState(350);
   const [text, setText] = useState('Sample');
   const [typeOfColorPicker, setTypeOfColorPicker] = useState('');
-  const [textColor, setTextColor] = useState('#ffffff');
+  const [textColor, setTextColor] = useState('#000000');
   const [fontSize, setFontSize] = useState(20);
   const [fontFamily, setFontFamily] = useState('Helvetica');
-  const [backgroundColor, setBackgroundColor] = useState('#000000');
+  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   const [href, setHref] = useState('');
 
   const value = {

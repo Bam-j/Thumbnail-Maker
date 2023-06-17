@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 import { setCanvasFont } from "./setCanvasFont";
 import { drawText } from "./drawText";
+import styled from "styled-components";
 
 /*
 기능: 사용자가 설정한 width/height, text, text와 bg의 색에 따라 섬네일 미리보기가 여기에 출력.
@@ -31,7 +32,8 @@ export const ThumbnailPalette = ({
         size: fontSize,
         family: fontFamily
       });
-      drawText(canvas, text, fontSize);
+      //drawText(canvas, text, fontSize);
+      ctx.fillText(text, canvas.width/2, canvas.height/2);
       update(canvas.toDataURL());
     };
     render().then(r => r);
@@ -45,7 +47,7 @@ export const ThumbnailPalette = ({
     backgroundColor,
     update,
   ]);
-
+/*
   return (
     <canvas
       className={'previewCanvas'}
@@ -54,15 +56,15 @@ export const ThumbnailPalette = ({
       height={height}
     />
   );
-/*
+*/
+
   return (
     <>
-      <div className={'thumbnail-palette-container'}>
+      <PreviewWrapper>
         <Preview
           id={'thumbnail'}
           className={'thumbnail'}
           spellCheck={false}
-          contentEditable={'true'}
           suppressContentEditableWarning={true}
           style={{
             width: `${width}px`,
@@ -72,19 +74,25 @@ export const ThumbnailPalette = ({
             backgroundPosition: 'center',
             color: textColor,
             fontSize: `${fontSize}px`,
-            fontFamily: fontFamily,
+            fontFamily: fontFamily
           }}>
-          테스트 문구
+          {text}
         </Preview>
-      </div>
+      </PreviewWrapper>
     </>
   );
-
- */
 };
 
-/*
+const PreviewWrapper = styled.div`\
+  border: 1px solid red;
+  position: relative;
+`;
+
 const Preview = styled.div`
   margin: auto;
+  border: 1px solid blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
- */
