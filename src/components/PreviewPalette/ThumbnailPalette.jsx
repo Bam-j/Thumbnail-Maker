@@ -7,18 +7,22 @@ import styled from "styled-components";
 /*
 기능: 사용자가 설정한 width/height, text, text와 bg의 색에 따라 섬네일 미리보기가 여기에 출력.
  */
-export const ThumbnailPalette = ({
-  width,
-  height,
-  textColor,
-  backgroundColor,
-  update,
-}) => {
-  const { text, fontSize, fontFamily } = useContext(
-    ThumbnailContentsContext
-  ).state;
+export const ThumbnailPalette = () => {
+  const {
+    width,
+    height,
+    text,
+    fontSize,
+    fontFamily,
+    textColor,
+    backgroundColor
+  } = useContext(ThumbnailContentsContext).state;
+  //const { text, fontSize, fontFamily } = useContext(ThumbnailContentsContext).state;
+  const [contents, setContents] = useState('');
+  const { setText } = useContext(ThumbnailContentsContext).actions;
   const previewRef = useRef(null);
 
+  /*
   useEffect(() => {
     const render = async () => {
       const canvas = previewRef.current;
@@ -47,14 +51,14 @@ export const ThumbnailPalette = ({
     backgroundColor,
     update,
   ]);
-/*
   return (
     <canvas
       className={'previewCanvas'}
       ref={previewRef}
       width={width}
-      height={height}
-    />
+      height={height}>
+      대체 텍스트
+      </canvas>
   );
 */
 
@@ -64,6 +68,7 @@ export const ThumbnailPalette = ({
         <Preview
           id={'thumbnail'}
           className={'thumbnail'}
+          ref={previewRef}
           spellCheck={false}
           suppressContentEditableWarning={true}
           style={{
@@ -83,16 +88,10 @@ export const ThumbnailPalette = ({
   );
 };
 
-const PreviewWrapper = styled.div`\
-  border: 1px solid red;
-  position: relative;
+const PreviewWrapper = styled.div`
+  text-align: center;
 `;
 
 const Preview = styled.div`
   margin: auto;
-  border: 1px solid blue;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `;
