@@ -7,11 +7,12 @@ import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
  */
 export const SizeForm = () => {
   const { state, actions } = useContext(ThumbnailContentsContext);
+  const { setWidth, setHeight } = useContext(ThumbnailContentsContext).actions;
 
   const handleChange = (e) => {
     e.target.name === 'width'
-      ? actions.setWidth(e.target.value)
-      : actions.setHeight(e.target.value);
+      ? setWidth(e.target.value)
+      : setHeight(e.target.value);
   };
 
   return (

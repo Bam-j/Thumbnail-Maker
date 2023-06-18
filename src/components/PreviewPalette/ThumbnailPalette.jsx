@@ -18,8 +18,8 @@ export const ThumbnailPalette = () => {
     backgroundColor
   } = useContext(ThumbnailContentsContext).state;
   //const { text, fontSize, fontFamily } = useContext(ThumbnailContentsContext).state;
-  const [contents, setContents] = useState('');
-  const { setText } = useContext(ThumbnailContentsContext).actions;
+  //const [contents, setContents] = useState('');
+  //const { setText } = useContext(ThumbnailContentsContext).actions;
   const previewRef = useRef(null);
 
   /*
