@@ -1,13 +1,13 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
-import { setCanvasFont } from "./setCanvasFont";
-import { drawText } from "./drawText";
+//import { setCanvasFont } from "./setCanvasFont";
+//import { drawText } from "./drawText";
 import styled from "styled-components";
 
 /*
 기능: 사용자가 설정한 width/height, text, text와 bg의 색에 따라 섬네일 미리보기가 여기에 출력.
  */
-export const ThumbnailPalette = () => {
+export const PreviewPalette = () => {
   const {
     width,
     height,
