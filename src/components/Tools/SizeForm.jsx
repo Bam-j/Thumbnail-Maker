@@ -18,6 +18,7 @@ export const SizeForm = () => {
   return (
     <SizeFormWrapper>
       <label className={'size-input'}>
+        width:&nbsp;
         <WidthInput
           placeholder={'width'}
           name={'width'}
@@ -26,6 +27,7 @@ export const SizeForm = () => {
         />
       </label>
       <label className={'size-input'}>
+        height:&nbsp;
         <HeightInput
           placeholder={'height'}
           name={'height'}
@@ -47,6 +49,10 @@ const SizeFormWrapper = styled.div`
   & .size-input:first-child {
     margin-right: 10px;
   }
+`;
+
+const Label = styled.div`
+  background-color: #dddddd;
 `;
 
 const WidthInput = styled.input`

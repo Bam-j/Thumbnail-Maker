@@ -70,6 +70,7 @@ export const ThumbnailPalette = () => {
           className={'thumbnail'}
           ref={previewRef}
           spellCheck={false}
+          height={height}
           suppressContentEditableWarning={true}
           style={{
             width: `${width}px`,
@@ -79,7 +80,8 @@ export const ThumbnailPalette = () => {
             backgroundPosition: 'center',
             color: textColor,
             fontSize: `${fontSize}px`,
-            fontFamily: fontFamily
+            fontFamily: fontFamily,
+            lineHeight: `${height}px`
           }}>
           {text}
         </Preview>
