@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Header = () => {
 	const onClick = () => window.location.reload();
 
+
 	return (
 		<>
 			<HeaderContainer>
@@ -18,7 +19,7 @@ const HeaderContainer = styled.div`
 
 const Title = styled.div`
 	color: #ffffff;
-	font-size: 1.125rem;
+	font-size: 1.5rem;
 	margin: 15px;
 	cursor: pointer;
 	

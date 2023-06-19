@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Header } from "./components/Header";
-import { PreviewPalette } from "./components/PreviewPalette/PreviewPalette";
+import { ThumbnailPalette } from "./components/PreviewPalette/ThumbnailPalette";
 import { TextInput } from "./components/Tools/TextInput";
 import './styles/App.scss';
 import { SizeForm } from "./components/Tools/SizeForm";
@@ -16,7 +16,7 @@ const App = () => {
       <Header />
       <div className={'maker-wrapper'}>
         <div className={'maker-container'}>
-          <PreviewPalette/>
+          <ThumbnailPalette/>
           <TextInput/>
           <SizeForm/>
           <ColorPickerButtons/>
