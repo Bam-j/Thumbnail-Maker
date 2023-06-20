@@ -15,10 +15,14 @@ export const TextInput = () => {
     'Courier',
     'Noto Sans KR',
   ];
-  const { actions } = useContext(ThumbnailContentsContext);
+  const { state, actions } = useContext(ThumbnailContentsContext);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     actions.setText(e.target.value);
+  };
+
+  const changeFontSize = e => {
+    actions.setFontSize(e.target.value);
   };
 
   return (
@@ -29,8 +33,11 @@ export const TextInput = () => {
         type={'text'}
       />
       <FontSettingWrapper>
-        <SelectFontSize className={'font-setting'}>
-          {fontSizeList.map((size) => (
+        <SelectFontSize
+          className={'font-setting'}
+          onChange={changeFontSize}
+        >
+          {fontSizeList.map(size => (
             <option
               key={size}
               value={size}>
@@ -39,7 +46,7 @@ export const TextInput = () => {
           ))}
         </SelectFontSize>
         <SelectFont className={'font-setting'}>
-          {fontList.map((font) => (
+          {fontList.map(font => (
             <option
               key={font}
               value={font}>
