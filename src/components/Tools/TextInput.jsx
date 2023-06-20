@@ -25,6 +25,10 @@ export const TextInput = () => {
     actions.setFontSize(e.target.value);
   };
 
+  const changeFontFamily = e => {
+    actions.setFontFamily(e.target.value);
+  };
+
   return (
     <>
       <Input
@@ -36,6 +40,7 @@ export const TextInput = () => {
         <SelectFontSize
           className={'font-setting'}
           onChange={changeFontSize}
+          defaultValue={fontSizeList[4]}
         >
           {fontSizeList.map(size => (
             <option
@@ -45,7 +50,10 @@ export const TextInput = () => {
             </option>
           ))}
         </SelectFontSize>
-        <SelectFont className={'font-setting'}>
+        <SelectFont
+          className={'font-setting'}
+          onChange={changeFontFamily}
+        >
           {fontList.map(font => (
             <option
               key={font}
