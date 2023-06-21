@@ -15,7 +15,7 @@ export const TextInput = () => {
     'Courier',
     'Noto Sans KR',
   ];
-  const { state, actions } = useContext(ThumbnailContentsContext);
+  const { actions } = useContext(ThumbnailContentsContext);
 
   const handleChange = e => {
     actions.setText(e.target.value);

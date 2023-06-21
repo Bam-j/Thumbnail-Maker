@@ -36,7 +36,7 @@ export const FontColorPickerButton = () => {
         <BiFontColor />
       </Button>
 
-      {isClick && <ColorPicker ref={colorPickRef}/>}
+      {isClick && <ColorPicker buttonType={'font'}/>}
     </ColorPickerWrapper>
   );
 };
