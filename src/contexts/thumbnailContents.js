@@ -21,7 +21,7 @@ const ThumbnailContentsProvider = ({ children }) => {
   const [text, setText] = useState('Sample');
   const [typeOfColorPicker, setTypeOfColorPicker] = useState('');
   const [textColor, setTextColor] = useState('#ffffff');
-  const [fontSize, setFontSize] = useState(20);
+  const [fontSize, setFontSize] = useState(60);
   const [fontFamily, setFontFamily] = useState('Helvetica');
   const [backgroundColor, setBackgroundColor] = useState('#000000');
   const [href, setHref] = useState('');

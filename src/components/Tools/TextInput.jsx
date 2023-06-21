@@ -17,8 +17,16 @@ export const TextInput = () => {
   ];
   const { actions } = useContext(ThumbnailContentsContext);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     actions.setText(e.target.value);
+  };
+
+  const changeFontSize = e => {
+    actions.setFontSize(e.target.value);
+  };
+
+  const changeFontFamily = e => {
+    actions.setFontFamily(e.target.value);
   };
 
   return (
@@ -29,8 +37,12 @@ export const TextInput = () => {
         type={'text'}
       />
       <FontSettingWrapper>
-        <SelectFontSize className={'font-setting'}>
-          {fontSizeList.map((size) => (
+        <SelectFontSize
+          className={'font-setting'}
+          onChange={changeFontSize}
+          defaultValue={fontSizeList[4]}
+        >
+          {fontSizeList.map(size => (
             <option
               key={size}
               value={size}>
@@ -38,8 +50,11 @@ export const TextInput = () => {
             </option>
           ))}
         </SelectFontSize>
-        <SelectFont className={'font-setting'}>
-          {fontList.map((font) => (
+        <SelectFont
+          className={'font-setting'}
+          onChange={changeFontFamily}
+        >
+          {fontList.map(font => (
             <option
               key={font}
               value={font}>

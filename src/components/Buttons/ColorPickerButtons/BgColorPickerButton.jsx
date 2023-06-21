@@ -34,7 +34,7 @@ export const BgColorPickerButton = () => {
         <BiColorFill />
       </Button>
 
-      {isClick && <ColorPicker />}
+      {isClick && <ColorPicker buttonType={'background'}/>}
     </ColorPickerWrapper>
   );
 };

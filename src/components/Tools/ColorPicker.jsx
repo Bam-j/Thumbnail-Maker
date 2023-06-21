@@ -1,15 +1,30 @@
 import styled from 'styled-components';
 import { HexColorPicker } from 'react-colorful';
-import React, { useState } from "react";
+import { useContext, useState } from 'react';
 import './../../styles/conponents/Tools/ColorPicker.scss';
+import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 
-export const ColorPicker = () => {
-  const [color, setColor] = useState('#ffffff');
+export const ColorPicker = ({ buttonType }) => {
+  const [selectedColor, setSelectedColor] = useState();
+  const { actions } = useContext(ThumbnailContentsContext);
+
+  const changeColor = (color) => {
+    setSelectedColor(color);
+
+    if (buttonType === 'background') {
+      actions.setBackgroundColor(selectedColor);
+    } else {
+      actions.setTextColor(selectedColor);
+    }
+  };
 
   return (
-      <ColorPickerBox className={'color-picker-box'}>
-        <HexColorPicker color={color} onChange={setColor} prefixed/>
-      </ColorPickerBox>
+    <ColorPickerBox className={'color-picker-box'}>
+      <HexColorPicker
+        color={selectedColor}
+        onChange={changeColor}
+      />
+    </ColorPickerBox>
   );
 };
 
