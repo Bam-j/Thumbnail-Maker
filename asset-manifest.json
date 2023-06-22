@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Thumbnail-Maker/static/css/main.046806a7.css",
+    "main.js": "/Thumbnail-Maker/static/js/main.a9f314f3.js",
+    "static/js/787.d8f177ab.chunk.js": "/Thumbnail-Maker/static/js/787.d8f177ab.chunk.js",
+    "index.html": "/Thumbnail-Maker/index.html",
+    "main.046806a7.css.map": "/Thumbnail-Maker/static/css/main.046806a7.css.map",
+    "main.a9f314f3.js.map": "/Thumbnail-Maker/static/js/main.a9f314f3.js.map",
+    "787.d8f177ab.chunk.js.map": "/Thumbnail-Maker/static/js/787.d8f177ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.046806a7.css",
+    "static/js/main.a9f314f3.js"
+  ]
+}
