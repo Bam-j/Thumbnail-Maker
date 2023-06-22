@@ -29,8 +29,8 @@ export const PreviewPalette = () => {
       .then((canvas) => {
         saveImg(canvas.toDataURL('image/jpg'), 'image.jpg', text);
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(e => {
+        console.error(e);
       });
   };
 
