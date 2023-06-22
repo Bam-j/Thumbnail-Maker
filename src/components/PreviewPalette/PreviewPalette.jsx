@@ -1,8 +1,9 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef } from 'react';
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
-//import { setCanvasFont } from "./setCanvasFont";
-//import { drawText } from "./drawText";
-import styled from "styled-components";
+import styled from 'styled-components';
+import { DownloadButton } from '../Buttons/DownloadButton';
+import html2canvas from 'html2canvas';
+import { saveImg } from './saveImg';
 
 /*
 기능: 사용자가 설정한 width/height, text, text와 bg의 색에 따라 섬네일 미리보기가 여기에 출력.
@@ -15,52 +16,23 @@ export const PreviewPalette = () => {
     fontSize,
     fontFamily,
     textColor,
-    backgroundColor
+    backgroundColor,
   } = useContext(ThumbnailContentsContext).state;
-  //const { text, fontSize, fontFamily } = useContext(ThumbnailContentsContext).state;
-  //const [contents, setContents] = useState('');
-  //const { setText } = useContext(ThumbnailContentsContext).actions;
   const previewRef = useRef(null);
 
-  /*
-  useEffect(() => {
-    const render = async () => {
-      const canvas = previewRef.current;
-      const ctx = canvas.getContext('2d');
-
-      ctx.fillStyle = backgroundColor;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      setCanvasFont(canvas, {
-        color: textColor,
-        size: fontSize,
-        family: fontFamily
+  const capturingThumbnail = () => {
+    html2canvas(document.getElementById('thumbnail'), {
+      width: width,
+      height: height,
+      scale: 1,
+    })
+      .then((canvas) => {
+        saveImg(canvas.toDataURL('image/jpg'), 'image.jpg', text);
+      })
+      .catch((err) => {
+        console.error(err);
       });
-      //drawText(canvas, text, fontSize);
-      ctx.fillText(text, canvas.width/2, canvas.height/2);
-      update(canvas.toDataURL());
-    };
-    render().then(r => r);
-  }, [
-    width,
-    height,
-    text,
-    textColor,
-    fontSize,
-    fontFamily,
-    backgroundColor,
-    update,
-  ]);
-  return (
-    <canvas
-      className={'previewCanvas'}
-      ref={previewRef}
-      width={width}
-      height={height}>
-      대체 텍스트
-      </canvas>
-  );
-*/
+  };
 
   return (
     <>
@@ -81,11 +53,12 @@ export const PreviewPalette = () => {
             color: textColor,
             fontSize: `${fontSize}px`,
             fontFamily: fontFamily,
-            lineHeight: `${height}px`
+            lineHeight: `${height}px`,
           }}>
           {text}
         </Preview>
       </PreviewWrapper>
+      <DownloadButton onClick={() => capturingThumbnail()} />
     </>
   );
 };
@@ -97,8 +70,8 @@ const PreviewWrapper = styled.div`
 const Preview = styled.div`
   margin: auto;
 
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;
