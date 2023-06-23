@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
 
 const Title = styled.div`
 	color: #ffffff;
-	font-size: 1.75rem;
+	font-size: 2rem;
 	margin: 15px;
 	cursor: pointer;
 	

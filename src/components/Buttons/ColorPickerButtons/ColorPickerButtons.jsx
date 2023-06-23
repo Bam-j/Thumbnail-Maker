@@ -15,5 +15,5 @@ const ColorPickerButtonsWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	padding-top: 1rem;
-	transform: scale(1.2, 1.2);
+	transform: scale(1.5, 1.5);
 `;
