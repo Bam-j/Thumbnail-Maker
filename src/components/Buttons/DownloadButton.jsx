@@ -18,11 +18,12 @@ export const DownloadButton = ({ onClick }) => {
 const DownloadButtonWrapper = styled.div`
 	display: flex;
 	justify-content: center;
+	transform: scale(1.2, 1.2);
 `;
 
 const Download = styled.button`
 	margin-top: 1rem;
-	background-color: #3a6aff;
+	background-color: #3a6add;
 	border-radius: 10px;
 	outline: none;
 	border: none;
@@ -30,7 +31,7 @@ const Download = styled.button`
 	color: #eaeaea;
 	
 	&:hover {
-		background-color: #6a9aff;
-		color: #3a3a3a; 
+		background-color: #6a9add;
+		color: #292929;
 	}
 `;
