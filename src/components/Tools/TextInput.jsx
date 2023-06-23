@@ -1,20 +1,10 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
+import { fontList, fontSizeList } from "./utils";
 
-/*
-기능: 사용자가 입력한 텍스트가 Preview에 보이도록 전달.
- */
+
 export const TextInput = () => {
-  const fontSizeList = [20, 30, 40, 50, 60, 70, 80];
-  const fontList = [
-    'Helvetica',
-    'Nanum Gothic',
-    'Nanum Gothic Coding',
-    'Arial',
-    'Courier',
-    'Noto Sans KR',
-  ];
   const { actions } = useContext(ThumbnailContentsContext);
 
   const handleChange = e => {
@@ -40,7 +30,7 @@ export const TextInput = () => {
         <SelectFontSize
           className={'font-setting'}
           onChange={changeFontSize}
-          defaultValue={fontSizeList[4]}
+          defaultValue={fontSizeList[5]}
         >
           {fontSizeList.map(size => (
             <option

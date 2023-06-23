@@ -5,9 +5,6 @@ import { DownloadButton } from '../Buttons/DownloadButton';
 import html2canvas from 'html2canvas';
 import { saveImg } from './saveImg';
 
-/*
-기능: 사용자가 설정한 width/height, text, text와 bg의 색에 따라 섬네일 미리보기가 여기에 출력.
- */
 export const PreviewPalette = () => {
   const {
     width,

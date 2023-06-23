@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { useEffect, useRef, useState } from "react";
 import { ColorPicker } from "../../Tools/ColorPicker";
 
-/*
-기능: 폰트를 선택하면 Preview의 글자 색 변경. 컬러 선택기가 오픈.
- */
 export const FontColorPickerButton = () => {
   const [isClick, setIsClick] = useState(false);
   const colorPickRef = useRef(null);

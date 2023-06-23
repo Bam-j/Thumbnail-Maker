@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { useEffect, useRef, useState } from 'react';
 import { ColorPicker } from '../../Tools/ColorPicker';
 
-/*
-기능: 이 버튼을 누르면 Preview의 배경색이 변경. 컬러 선택기가 오픈.
- */
 export const BgColorPickerButton = () => {
   const [isClick, setIsClick] = useState(false);
   const colorPickRef = useRef(null);
