@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 
 export const SizeForm = () => {
-  const { state, actions } = useContext(ThumbnailContentsContext);
+  const { state  } = useContext(ThumbnailContentsContext);
   const { setWidth, setHeight } = useContext(ThumbnailContentsContext).actions;
 
   const handleChange = (e) => {
