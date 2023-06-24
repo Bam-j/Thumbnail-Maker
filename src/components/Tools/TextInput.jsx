@@ -65,6 +65,7 @@ const Input = styled.input`
   color: #ffffff;
   padding-top: 1.25rem;
   margin: auto;
+  width: 13rem;
 
   &:focus {
     outline: none;
@@ -87,13 +88,13 @@ const FontSettingWrapper = styled.div`
 `;
 
 const SelectFontSize = styled.select`
-  width: 50px;
-  height: 20px;
+  width: 2.5rem;
+  height: 1rem;
   margin-right: 5px;
 `;
 
 const SelectFont = styled.select`
-  width: 100px;
-  height: 20px;
-  font-size: 0.5rem;
+  width: 5rem;
+  height: 1rem;
+  font-size: 0.625rem;
 `;

@@ -49,10 +49,11 @@ const SizeFormWrapper = styled.div`
 `;
 
 const WidthInput = styled.input`
-  width: 50px;
-  
+  width: 2.5rem;
+  height: auto;
 `;
 
 const HeightInput = styled.input`
-  width: 50px;
+  width: 2.5rem;
+  height: auto;
 `;

@@ -42,8 +42,8 @@ const ColorPickerWrapper = styled.div`
 
 const Button = styled.button`
   background-color: #e3e3e3;
-  width: 30px;
-  height: 30px;
+  width: 1.5rem;
+  height: 1.5rem;
   outline: none;
   border: black solid 2px;
   border-radius: 5px;

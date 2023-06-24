@@ -20,11 +20,13 @@ const DownloadButtonWrapper = styled.div`
 const Download = styled.button`
 	margin-top: 1rem;
 	background-color: #3a6add;
-	border-radius: 10px;
+	border-radius: 4px;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	color: #eaeaea;
+	width: 5rem;
+	height: 1rem;
 	
 	&:hover {
 		background-color: #6a9add;
