@@ -42,7 +42,6 @@ const SizeFormWrapper = styled.div`
   margin: auto;
   padding-top: 1rem;
   color: #ffffff;
-  transform: scale(1.5, 1.5);
 
   & .size-input:first-child {
     margin-right: 10px;
