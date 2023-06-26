@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
-import { fontList, fontSizeList } from "./utils";
+import { fontList, fontSizeList } from "../../utils/utils";
 
 
 export const TextInput = () => {
@@ -63,9 +63,10 @@ const Input = styled.input`
   border-style: none none solid none;
   border-bottom-color: #c3c3c3;
   color: #ffffff;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
   margin: auto;
   width: 13rem;
+  font-size: 0.75rem;
 
   &:focus {
     outline: none;

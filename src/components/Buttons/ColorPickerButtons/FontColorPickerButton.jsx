@@ -1,12 +1,14 @@
 import { BiFontColor } from 'react-icons/bi';
 import styled from 'styled-components';
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ColorPicker } from "../../Tools/ColorPicker";
+import { getContrastAndChangeColor } from "../../../utils/getContrastAndChangeColor";
+import { ThumbnailContentsContext } from "../../../contexts/thumbnailContents";
 
 export const FontColorPickerButton = () => {
   const [isClick, setIsClick] = useState(false);
   const colorPickRef = useRef(null);
-
+  const { textColor } = useContext(ThumbnailContentsContext).state;
 
   useEffect(() => {
     const handleOutside = e => {
@@ -26,11 +28,20 @@ export const FontColorPickerButton = () => {
     setIsClick(!isClick);
   };
 
+  const icon = {
+    color: getContrastAndChangeColor(textColor),
+    mixBlendMode: 'difference'
+  };
 
   return (
     <ColorPickerWrapper ref={colorPickRef}>
-      <Button onClick={onClick}>
-        <BiFontColor />
+      <Button
+        onClick={onClick}
+        style={{
+          backgroundColor: textColor
+        }}
+      >
+        <BiFontColor style={icon}/>
       </Button>
 
       {isClick && <ColorPicker buttonType={'font'}/>}
@@ -47,7 +58,7 @@ const Button = styled.button`
   width: 1.5rem;
   height: 1.5rem;
   outline: none;
-  border: black solid 2px;
+  border: black solid 1px;
   border-radius: 5px;
   margin-right: 1rem;
   cursor: pointer;
