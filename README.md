@@ -1,6 +1,5 @@
 # Thumbnail Maker 🎨
-![Thumbnail_Maker.png](..%2FDownloads%2FThumbnail_Maker.png)
-
+![Thumbnail_Maker](https://github.com/Bam-j/Thumbnail-Maker/assets/64255763/3a4b82f8-c39d-4783-815b-5ba902a07bd9)
 `Thumbnail Maker (썸네일 메이커)` <br>
 `ver 1.0.0` <br>
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBam-j%2FThumbnail-Maker&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
