@@ -1,5 +1,5 @@
 # Thumbnail Maker 🎨
-![Thumbnail_Maker](https://github.com/Bam-j/Thumbnail-Maker/assets/64255763/3a4b82f8-c39d-4783-815b-5ba902a07bd9)
+![Thumbnail_Maker](https://github.com/Bam-j/Thumbnail-Maker/assets/64255763/3a4b82f8-c39d-4783-815b-5ba902a07bd9) <br>
 `Thumbnail Maker (썸네일 메이커)` <br>
 `ver 1.0.0` <br>
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBam-j%2FThumbnail-Maker&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
@@ -22,9 +22,9 @@
 - 웹 페이지에서 바로 사용하는 경우는 **[링크](https://bam-j.github.io/Thumbnail-Maker/)** 에서 확인하실 수 있습니다.
 <br><br>
 - 또는 `git clone 사용`
-> 1. `git clone 'https://github.com/Bam-j/Thumbnail-Maker.git'`
-> 2. `yarn install` 또는 `npm install`로 패키지 다운로드
-> 3. `yarn start` 또는 `npm start`
+  1. `git clone 'https://github.com/Bam-j/Thumbnail-Maker.git'`
+  2. `yarn install` 또는 `npm install`로 패키지 다운로드
+  3. `yarn start` 또는 `npm start`
 
 <hr>
 
@@ -45,3 +45,11 @@
 - <del> 프로젝트에 대한 더 자세한 설명은 블로그 글을 참조해주세요.</del>
 - <del> 문서는 이 곳을 참조해주세요.</del>
 > 현재 작성 및 다듬는 중 입니다!
+
+<hr>
+
+## 예정 개선 사항
+
+- UI를 좀 더 심플하고 깔끔한 디자인으로 변경 (`mui`나 `ant design`의 라이브러리 사용도 고려)
+- 배경에 *이미지*를 첨부할 수 있게 조정
+- 다크 모드와 라이트 모드 구현
