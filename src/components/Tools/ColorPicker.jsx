@@ -8,7 +8,7 @@ export const ColorPicker = ({ buttonType }) => {
   const [selectedColor, setSelectedColor] = useState();
   const { actions } = useContext(ThumbnailContentsContext);
 
-  const changeColor = (color) => {
+  const changeColor = color => {
     setSelectedColor(color);
 
     if (buttonType === 'background') {
@@ -29,7 +29,7 @@ export const ColorPicker = ({ buttonType }) => {
 };
 
 const ColorPickerBox = styled.div`
-  border-radius: 14px;
+  border-radius: 15px;
   background-color: #ffffff;
   transition: visibility 0s, opacity 0.5s linear;
   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.5);

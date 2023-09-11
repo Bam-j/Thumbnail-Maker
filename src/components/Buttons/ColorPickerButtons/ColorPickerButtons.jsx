@@ -14,5 +14,5 @@ export const ColorPickerButtons = () => {
 const ColorPickerButtonsWrapper = styled.div`
 	display: flex;
 	justify-content: center;
-	padding-top: 1rem;
+	padding-top: 0.5rem;
 `;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useContext } from 'react';
 import { ThumbnailContentsContext } from '../../contexts/thumbnailContents';
 import { fontList, fontSizeList } from "../../utils/utils";
+import { MenuItem, Select } from "@mui/material";
 
 
 export const TextInput = () => {
@@ -27,31 +28,30 @@ export const TextInput = () => {
         type={'text'}
       />
       <FontSettingWrapper>
-        <SelectFontSize
-          className={'font-setting'}
+        <Select
+          sx={{
+            width: '3rem', height: '1.5rem', marginRight: '0.25rem',
+            fontSize: '0.75rem', backgroundColor: '#e9e9e9'
+          }}
           onChange={changeFontSize}
           defaultValue={fontSizeList[5]}
         >
           {fontSizeList.map(size => (
-            <option
-              key={size}
-              value={size}>
-              {size}
-            </option>
+            <MenuItem value={size}>{size}</MenuItem>
           ))}
-        </SelectFontSize>
-        <SelectFont
-          className={'font-setting'}
+        </Select>
+        <Select
+          sx={{
+            width: '6rem', height: '1.5rem', marginRight: '0.25rem',
+            fontSize: '0.5rem', backgroundColor: '#e9e9e9'
+          }}
           onChange={changeFontFamily}
+          defaultValue={fontList[0]}
         >
           {fontList.map(font => (
-            <option
-              key={font}
-              value={font}>
-              {font}
-            </option>
+            <MenuItem value={font}>{font}</MenuItem>
           ))}
-        </SelectFont>
+        </Select>
       </FontSettingWrapper>
     </>
   );
@@ -61,12 +61,13 @@ const Input = styled.input`
   display: flex;
   background: none;
   border-style: none none solid none;
-  border-bottom-color: #c3c3c3;
+  border-bottom-color: #eeeeee;
   color: #ffffff;
-  padding-top: 1rem;
+  padding-top: 0.75rem;
   margin: auto;
   width: 13rem;
   font-size: 0.75rem;
+  outline: none;
 
   &:focus {
     outline: none;
@@ -85,17 +86,5 @@ const FontSettingWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding-top: 1.125rem;
-`;
-
-const SelectFontSize = styled.select`
-  width: 2.5rem;
-  height: 1rem;
-  margin-right: 5px;
-`;
-
-const SelectFont = styled.select`
-  width: 5rem;
-  height: 1rem;
-  font-size: 0.625rem;
+  padding-top: 0.5rem;
 `;
