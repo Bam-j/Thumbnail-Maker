@@ -43,8 +43,7 @@
 
 ## 기타 ✍
 - 프로젝트에 대한 더 자세한 설명은 [블로그 글](https://velog.io/@bami/Thumbnail-Maker)을 참조해주세요.
-- <del> 문서는 이 곳을 참조해주세요.</del>
-> 현재 작성 및 다듬는 중 입니다!
+- [GitHub Wiki](https://github.com/Bam-j/Thumbnail-Maker/wiki)
 
 <hr>
 
@@ -55,3 +54,5 @@
 - 배경에 *이미지*를 첨부할 수 있게 조정
 - 다크 모드와 라이트 모드 구현
 - JSX -> TSX 변환
+- 배경색, 글자색 선택 상태가 Picker 값에 설정되지 않음.
+- 배경색, 글자색 버튼 UI 개선. (버튼 크기, 디자인 일관성)
